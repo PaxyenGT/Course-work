@@ -1,0 +1,69 @@
+﻿<Window x:Name="window" x:Class="курсовая.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:курсовая"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="Расчет сдельной заработной платы" FlowDirection="RightToLeft" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Padding="0,6,0,15"/>
+        <WrapPanel HorizontalAlignment="Center" Margin="0,10,0,0">
+            <ComboBox x:Name="product_name" Width="258" Margin="0,0,0,10" Height="25" FontSize="14">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFA8ADFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+                <ComboBoxItem Content="Эко премиум зеленые гранулы" IsSelected="True"/>
+                <ComboBoxItem Content="Эко премиум синие гранулы"/>
+                <ComboBoxItem Content="Эко премиум лаванда"/>
+                <ComboBoxItem Content="эко премиум экстракт алоэ"/>
+                <ComboBoxItem Content="Эко премиум тутти-фрутти"/>
+                <ComboBoxItem Content="эко премиум ромашка"/>
+                <ComboBoxItem Content="Эко премиум персик"/>
+                <ComboBoxItem Content="эко премиум зеленый чай"/>
+                <ComboBoxItem Content="patron силикагель синие гранулы"/>
+                <ComboBoxItem Content="patron силикагель зеленые гранулы"/>
+                <ComboBoxItem Content="patron силикагель фиолетовые гранулы"/>
+                <ComboBoxItem Content="patron силикагель розовые гранулы"/>
+                <ComboBoxItem Content="эрошка тофу зеленый чай"/>
+                <ComboBoxItem Content="эрошка тофу лаванда"/>
+                <ComboBoxItem Content="эрошка тофу персик"/>
+                <ComboBoxItem Content="эрошка тофу алоэ"/>
+                <ComboBoxItem Content="эрошка тофу тутти-фрутти"/>
+                <ComboBoxItem Content="эрошка тофу ромашка"/>
+                <ComboBoxItem Content="эрошка тофу сакура"/>
+            </ComboBox>
+            <ComboBox x:Name="volume" Width="50" Margin="0,0,10,10" Height="25" FontSize="14">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFA8ADFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+                <ComboBoxItem Content="55" IsSelected="True"/>
+                <ComboBoxItem Content="20"/>
+                <ComboBoxItem Content="12,5"/>
+                <ComboBoxItem Content="12"/>
+                <ComboBoxItem Content="5"/>
+                <ComboBoxItem Content="3,9"/>
+            </ComboBox>
+            <Label x:Name="text" Content="Введите количество" Margin="0,0,0,10" Height="25" FontSize="14" Width="145"/>
+            <TextBox x:Name="quantity" TextWrapping="Wrap" Width="50" Margin="0,0,10,10" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25"/>
+            <Button x:Name="add_product" Content="Добавить" Click="add_product_Click" Width="80" Margin="10,0,0,10" FontSize="14" BorderBrush="#FFA8ADFF" Background="#FFA8ADFF"/>
+            <Button x:Name="remove_product" Content="Удалить" Margin="10,0,0,10" Width="80" Click="remove_product_Click" FontSize="14" BorderBrush="#FFA8ADFF" Background="#FFA8ADFF"/>
+
+        </WrapPanel>
+        <ListBox x:Name="product_list" Height="100" Background="#FFFDDFFF" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Width="700"/>
+        <Label x:Name="total_salary" Content="0 руб." HorizontalAlignment="Right" Margin="0,0,50,0" Padding="5,5,5,25"/>
+        <WrapPanel HorizontalAlignment="Right" Margin="0,0,50,0">
+            <Button x:Name="clear_list" Content="Очистить список" Click="clear_list_Click" HorizontalContentAlignment="Center" Margin="0,0,25,0" Width="120" FontSize="14" Background="#FFA8ADFF"/>
+            <Button x:Name="print" Content="Печать" Click="clear_list_Click" Width="75" FontSize="14" Background="#FFA8ADFF"/>
+        </WrapPanel>
+
+
+
+    </StackPanel>
+</Window>
